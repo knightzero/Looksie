@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<images>
+    {% for image in images %}
+    <image>
+        <uuid>{{ image.uuid }}</uuid>
+        <url>{{ image.url }}</url>
+        <dots>
+            {% for dot in image.dot_set.all %}
+                <uuid>{{ dot.uuid }}</uuid>
+                <x>{{ dot.x }}</x>
+                <y>{{ dot.y }}</y>
+                <title>{{ dot.title }}</title>
+                <description>{{ dot.description }}</description>
+                <callToAction>{{ dot.callToAction }}</callToAction>
+                <linkHref>{{ dot.linkHref }}</linkHref>
+                <linkText>{{ dot.linkText }}</linkText>
+            {% endfor %}
+        </dots>
+    </image>
+    {% endfor %}
+</images>
