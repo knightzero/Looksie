@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>LOOKSIE.CO - Easily embed trackable links in your visual content</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <script src="/static/js/vendor/modernizr-2.6.2.min.js"></script>
+
+    <style type="text/css">
+      #tagger_container {position: relative;}
+      #tagger {position: relative; display: inline-block;}
+
+      /*#taggy_image {position: absolute;}*/
+
+      .dot {position: absolute; height: 10px; width: 10px; background: url('https://big-like-user-images.s3.amazonaws.com/dot.png');}
+
+      #tag_form_container {z-index: 50;background: #fff; padding: 10px; display: none; position: absolute; top: 0; left: 0;}
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <div id="container">
+      <!-- colorful top bars yipee! -->
+      <div style="height: 18px; background: #000; margin-top: 35px;"></div>
+      <div style="height: 8px; background: #91D1BD;margin-top: 9px;"></div>
+
+      <!-- Logo -->
+      <div style="margin-top: 65px; text-align: center;">
+        <a href="/" style="margin-top: 63px;"><img alt="LOOKSIE.CO" src="/static/img/logo_looksie-04.png" /></a>
+      </div>
+
+      <!-- header template end -->
+
+      <div style="width: 490px; margin: 75px auto 0;">
+        <p style="font-size: 24px; color: #58595B;">Create hot spots by clicking on the image where you want to embed content and links.</p>
+        <p style="font-size: 12px;color: #58595B;">EXAMPLE: If you want users to be able to buy these pants, click on the pants and link to the purchase site. </p>
+      </div>
+
+      <div id="tagger_container" style="margin-top: 30px; text-align: center;">
+        <div id="tagger">
+          <img id="taggy_image" src="https://big-like-user-images.s3.amazonaws.com/clothes.jpeg" />
+          <div id="tag_form_container">
+            <form id="tag_form">
+              <input id="form_dot_id" type="hidden" value="" />
+              Title <input type="text" id="form_title" /><br />
+              Description <input type="text" id="form_description" /><br />
+              Call to action <input type="text" id="form_call_to_action" /><br />
+              Link text  <input type="text" id="form_link_text" /><br />
+              Link URL  <input type="text" id="form_link_url" /><br />
+              <a id="close_form" href="#">Cancel</a> | <a id="save_dot" href="#">Save dot</a> | <a href="#" id="delete_dot">Delete dot</a>
+            </form>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div style="text-align: right; margin-right: 150px; margin-top: 50px;">
+        <a href="/embed/{{image.uuid}}/" id="save_continue"><img src="/static/img/ContinueButton-03.png" /></a>
+      </div>
+
+      <div style="width: 450px; margin: 0 auto; font-weight: 300; margin-top: 100px; margin-bottom: 100px;">
+        <div style="float: left; width: 150px;">
+          <p style="font-size: 15px; margin: 0; padding:0;">RESOURCES</p>
+          <p style="font-size: 15px; margin: 0; padding:0; color: #888;">imgur.com</p>
+        </div>
+        <div style="float: left; width: 150px;">
+          <p style="font-size: 15px; margin: 0; padding:0;">CONTACT</p>
+          <p style="font-size: 15px; margin: 0; padding:0; color: #888;">contact@looksie.co</p>
+        </div>
+        <div style="float: left; width: 150px;">
+          <p style="font-size: 15px; margin: 0; padding:0;">GET SOCIAL</p>
+          <p style="font-size: 15px; margin: 0; padding:0; color: #888;">@LooksieCo</p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+      <!-- footer template begin -->
+
+    </div>
+
+    <script type="text/javascript">
+    var post_data = {
+        'image_id' : 1234,
+        'links' : {}
+    };
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="/static/js/plugins.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/tagger.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      var _gaq=[['_setAccount','UA-38749893-1'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+  </body>
+</html>

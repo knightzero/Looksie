@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+      <div style="margin-top: 70px;">
+        <p style="margin: 0; padding: 0; font-size: 24px; color: #222; font-weight: 300; text-align: center;">Easily embed trackable links in your visual content.</p>
+      </div>
+
+      <div id="input_form_container" style="margin-top: 70px;">
+        <div id="input_form_input_container">
+          <form id="submit_url_form" action="/create/" method="POST">
+            <input type="text" name="image_url_input" id="image_url_input" style="border: 5px solid black;font-family: Helvetica;font-size: 20px;font-weight: 300;padding: 10px;height: 34px;width: 100%;" placeholder="Enter your image URL" />
+          </form>
+        </div>
+        <div id="input_form_button_container" style="background: black; height: 64px;">
+          <a href="#" id="index_continue_button"><img src="/static/img/ContinueButton-03.png" /></a>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+      <div style="width: 450px; margin: 0 auto; font-weight: 300; margin-top: 100px;">
+        <div style="float: left; width: 150px;">
+          <p style="font-size: 15px; margin: 0; padding:0;">RESOURCES</p>
+          <p style="font-size: 15px; margin: 0; padding:0; color: #888;">imgur.com</p>
+        </div>
+        <div style="float: left; width: 150px;">
+          <p style="font-size: 15px; margin: 0; padding:0;">CONTACT</p>
+          <p style="font-size: 15px; margin: 0; padding:0; color: #888;">contact@looksie.co</p>
+        </div>
+        <div style="float: left; width: 150px;">
+          <p style="font-size: 15px; margin: 0; padding:0;">GET SOCIAL</p>
+          <p style="font-size: 15px; margin: 0; padding:0; color: #888;">@LooksieCo</p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+{% endblock %}

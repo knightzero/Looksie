@@ -1,0 +1,33 @@
+.looksie-image {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #888888;
+    box-shadow: 0 0 5px #666666;
+}
+
+.looksie-image:hover .looksie-dot {
+    display: block;
+}
+
+.looksie-dot {
+    /*
+    */
+    display: none;
+    position: absolute;
+}
+
+.looksie-dot-detail {
+    display: none;
+}
+
+.looksie-dot-detail > div {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #888888;
+    box-shadow: 0 0 5px #666666;
+}
+.looksie-dot-detail > div a {
+    color: black;
+    text-decoration: none;
+}

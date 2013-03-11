@@ -1,0 +1,27 @@
+
+    <style type="text/css">
+      .looksie-image {
+          display: inline-block;
+          position: relative;
+      }
+      
+      .looksie-image:hover .looksie-dot {
+          display: block;
+      }
+      
+      .looksie-dot {
+          display: none;
+          position: absolute;
+      }
+    </style>
+
+    <div class="looksie-image" id="{{image.uuid}}">
+        <img src="{{image.url}}">
+        <!-- for each data as val --> 
+        {% for dot in image.dot_set.all %}
+            <a href="/api/link/{{dot.uuid}}/">
+                <img class="looksie-dot" src="/static/img/dot.png" style="top: {{dot.y}}px; left: {{dot.y}}px" title="{{dot.title}}" />
+            </a>
+        {% endfor %}
+        <!-- end for each --> 
+    </div>
